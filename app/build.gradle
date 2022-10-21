@@ -1,17 +1,19 @@
 plugins {
     id 'java'
     id 'application'
+    id 'checkstyle'
 }
 
 application {
     mainClassName = 'hexlet.code.App'
 }
 
+group 'hexlet.code'
+version '1.0-SNAPSHOT'
+
 compileJava {
     options.release = 17
 }
-group 'hexlet.code'
-version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
@@ -25,4 +27,8 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+run {
+    standardInput = System.in
 }
