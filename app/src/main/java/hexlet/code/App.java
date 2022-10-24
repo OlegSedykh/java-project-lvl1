@@ -5,12 +5,19 @@ import java.util.Scanner;
 public class App {
 
     public static void main(String[] args) {
-        System.out.println("Welcome to the Brain Games!");
-        Scanner name = new Scanner(System.in);
-        System.out.print("May I have your name? ");
-        var playerName = name.next();
-        //System.out.println("");
-        System.out.println("Hello, " + playerName + "!");
+        System.out.println("Please enter the game number and press Enter.\n1 - Greet\n2 - Even\n0 - Exit");
+        Scanner choice = new Scanner(System.in);
+        System.out.print("Your choice: ");
+        int choiceNumberGame = choice.nextInt();
+        System.out.println();
+        switch (choiceNumberGame) {
+            case 1:
+                Greet.toGreet();
+                break;
+            case 2:
+                Even.gameEven();
+                break;
+        }
     }
 
 }
