@@ -1,16 +1,15 @@
-package hexlet.code;
+package hexlet.code.Game;
 
+import hexlet.code.Engine;
 import org.apache.commons.lang3.RandomUtils;
 
 import java.util.Scanner;
 
+import static hexlet.code.Engine.playerName;
+
 public class Even {
     public static void gameEven() {
-        System.out.println("Welcome to the Brain Games!");
-        Scanner name = new Scanner(System.in);
-        System.out.print("May I have your name? ");
-        var playerName = name.next();
-        System.out.println("Hello, " + playerName + "!");
+        Engine.toGreet();
 
         System.out.println("Answer 'yes' if number even otherwise answer 'no'.");
         Scanner answer = new Scanner(System.in);
