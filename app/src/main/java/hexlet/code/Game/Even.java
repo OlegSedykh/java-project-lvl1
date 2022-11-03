@@ -12,24 +12,23 @@ public class Even {
         Engine.toGreet();
 
         System.out.println("Answer 'yes' if number even otherwise answer 'no'.");
-        Scanner answer = new Scanner(System.in);
+
+        String[][] questionsAndAnswersEven = new String[3][2];
+
         for (var i = 0; i < 3; i++) {
-            int question = RandomUtils.nextInt(1, 100);
-            System.out.println("Question: " + question);
-            System.out.print("Your answer: ");
-            var playerAnswer = answer.next();
-            if ((playerAnswer.equals("yes") && question % 2 == 0) || ((playerAnswer.equals("no") && question % 2 != 0))) {
-                System.out.println("Correct!");
-                if (i == 2) {
-                    System.out.println("Congratulations, " + playerName + "!");
-                }
-            } else if (!(playerAnswer.equals("yes")) && question % 2 == 0) {
-                System.out.println("'" + playerAnswer + "'" + " is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, " + playerName + "!");
-                break;
-            } else {
-                System.out.println("'" + playerAnswer + "'" + " is wrong answer ;(. Correct answer was 'no'.\nLet's try again, " + playerName + "!");
-                break;
-            }
+            int number1 = RandomUtils.nextInt(0, 100);
+            questionsAndAnswersEven[i][0] = Integer.toString(number1);
+            questionsAndAnswersEven[i][1] = Even.searchEvenOrNo(number1);
         }
+
+        Engine.toGame(questionsAndAnswersEven);
+
+    }
+
+    public static String searchEvenOrNo(int n1) {
+        if (n1 % 2 == 0) {
+            return "yes";
+        }
+        return "no";
     }
 }
