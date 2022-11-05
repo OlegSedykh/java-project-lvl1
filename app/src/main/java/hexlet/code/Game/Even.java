@@ -3,10 +3,6 @@ package hexlet.code.Game;
 import hexlet.code.Engine;
 import org.apache.commons.lang3.RandomUtils;
 
-import java.util.Scanner;
-
-import static hexlet.code.Engine.playerName;
-
 public class Even {
     public static void gameEven() {
         Engine.toGreet();

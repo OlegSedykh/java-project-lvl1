@@ -11,7 +11,7 @@ public class Calc {
 
         String[][] questionsAndAnswersCalc = new String[3][2];
         for (var i = 0; i < 3; i++) {
-            int numberAction = RandomUtils.nextInt(0, 3);//0 = "+"; 1 = "-"; 2 = "*";
+            int numberAction = RandomUtils.nextInt(0, 3); //0 = "+"; 1 = "-"; 2 = "*";
             int number1 = RandomUtils.nextInt(0, 100);
             int number2 = RandomUtils.nextInt(0, 100);
             switch (numberAction) {
@@ -27,6 +27,7 @@ public class Calc {
                     questionsAndAnswersCalc[i][0] = number1 + " * " + number2;
                     questionsAndAnswersCalc[i][1] = Integer.toString(number1 * number2);
                     break;
+                default:
             }
         }
 

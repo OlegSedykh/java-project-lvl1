@@ -25,8 +25,8 @@ public class Engine {
                     System.out.println("Congratulations, " + playerName + "!");
                 }
             } else {
-                System.out.println("'" + playerAnswer + "'" + " is wrong answer ;(. " +
-                        "Correct answer was " + "'" + sample[i][1] + "'" + ".\nLet's try again, " + playerName + "!");
+                System.out.println("'" + playerAnswer + "'" + " is wrong answer ;(. Correct answer was "
+                        + "'" + sample[i][1] + "'" + ".\nLet's try again, " + playerName + "!");
                 break;
             }
         }

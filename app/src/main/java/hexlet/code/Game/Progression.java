@@ -30,7 +30,7 @@ public class Progression {
     public static int[] makeProgressionInArray(int n1, int n2) { //n1-первое знач процессии, n2-шаг
         int[] someArray = new int[10];
         someArray[0] = n1;
-        for (var x = 0; x < someArray.length -1; x++) {
+        for (var x = 0; x < someArray.length - 1; x++) {
             someArray[x + 1] = someArray[x] + n2;
         }
         return someArray;
@@ -38,7 +38,7 @@ public class Progression {
 
     public static String replaceArrayToString(int[] sample, int y) { //y- значение-вопрос
         String befor = Arrays.toString(sample);
-        String[] sampleString = befor.substring(1,befor.length()-1).split(", ");
+        String[] sampleString = befor.substring(1, befor.length() - 1).split(", ");
         sampleString[y] = "..";
         String question = String.join(" ", sampleString);
         return question;
