@@ -35,6 +35,7 @@ public class App {
             default:
 
         }
+        choice.close();
     }
 
 }

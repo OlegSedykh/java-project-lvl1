@@ -16,7 +16,7 @@ public class GCD {
             int number1 = RandomUtils.nextInt(0, 100);
             int number2 = RandomUtils.nextInt(0, 100);
             questionsAndAnswersGCD[i][0] = Integer.toString(number1) + " " + Integer.toString(number2);
-            questionsAndAnswersGCD[i][1] = Integer.toString(GCD.searchGcd(number1, number2));
+            questionsAndAnswersGCD[i][1] = Integer.toString(searchGcd(number1, number2));
         }
 
         Engine.toGame(questionsAndAnswersGCD);

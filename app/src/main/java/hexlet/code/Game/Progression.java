@@ -18,8 +18,8 @@ public class Progression {
             int number1 = RandomUtils.nextInt(0, 100); //1е знач процессии
             int step = RandomUtils.nextInt(0, 100); //шаг процессии
             int number2 = RandomUtils.nextInt(0, 9); //значение-вопрос
-            int[] progression = Progression.makeProgressionInArray(number1, step);
-            questionsAndAnswersProgression[i][0] = Progression.replaceArrayToString(progression, number2);
+            int[] progression = makeProgressionInArray(number1, step);
+            questionsAndAnswersProgression[i][0] = replaceArrayToString(progression, number2);
             questionsAndAnswersProgression[i][1] = Integer.toString(progression[number2]);
         }
 

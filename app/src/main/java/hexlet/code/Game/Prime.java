@@ -15,7 +15,7 @@ public class Prime {
         for (var i = 0; i < 3; i++) {
             int number1 = RandomUtils.nextInt(0, 100);
             questionsAndAnswersPrime[i][0] = Integer.toString(number1);
-            questionsAndAnswersPrime[i][1] = Prime.isPrime(number1);
+            questionsAndAnswersPrime[i][1] = isPrime(number1);
         }
 
         Engine.toGame(questionsAndAnswersPrime);
