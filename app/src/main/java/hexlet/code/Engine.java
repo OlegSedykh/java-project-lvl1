@@ -1,9 +1,13 @@
 package hexlet.code;
 
+import org.apache.commons.lang3.RandomUtils;
+
 import java.util.Scanner;
 
 public class Engine {
     public static String playerName;
+    public static int numberOfRounds = 3;
+    public static int sumQuestionAndAnswer = 2;
     public static Scanner sc = new Scanner(System.in);
     public static void toGreet() {
         System.out.println("Welcome to the Brain Games!");
@@ -16,14 +20,13 @@ public class Engine {
 
     public static void toGame(String[][] sample) {
         //Scanner answer = new Scanner(System.in);
-        for (var i = 0; i < 3; i++) {
+        int countWin = 0;
+        for (var i = 0; i < numberOfRounds; i++) {
             System.out.print("Question: " + sample[i][0] + "\nYour answer: ");
             var playerAnswer = sc.next();
             if (playerAnswer.equals(sample[i][1])) {
                 System.out.println("Correct!");
-                if (i == 2) {
-                    System.out.println("Congratulations, " + playerName + "!");
-                }
+                countWin += 1;
             } else {
                 System.out.println("'" + playerAnswer + "'" + " is wrong answer ;(. Correct answer was "
                         + "'" + sample[i][1] + "'" + ".\nLet's try again, " + playerName + "!");
@@ -31,6 +34,9 @@ public class Engine {
             }
         }
         sc.close();
+        if (countWin == numberOfRounds) {
+            System.out.println("Congratulations, " + playerName + "!");
+        }
     }
 
 

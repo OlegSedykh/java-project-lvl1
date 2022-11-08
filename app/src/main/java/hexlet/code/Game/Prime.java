@@ -3,6 +3,9 @@ package hexlet.code.Game;
 import hexlet.code.Engine;
 import org.apache.commons.lang3.RandomUtils;
 
+import static hexlet.code.Engine.numberOfRounds;
+import static hexlet.code.Engine.sumQuestionAndAnswer;
+
 public class Prime {
 
     public static void gamePrime() {
@@ -10,9 +13,9 @@ public class Prime {
 
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
 
-        String[][] questionsAndAnswersPrime = new String[3][2];
+        String[][] questionsAndAnswersPrime = new String[numberOfRounds][sumQuestionAndAnswer];
 
-        for (var i = 0; i < 3; i++) {
+        for (var i = 0; i < numberOfRounds; i++) {
             int number1 = RandomUtils.nextInt(0, 100);
             questionsAndAnswersPrime[i][0] = Integer.toString(number1);
             questionsAndAnswersPrime[i][1] = isPrime(number1);

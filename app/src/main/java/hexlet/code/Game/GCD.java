@@ -3,6 +3,9 @@ package hexlet.code.Game;
 import hexlet.code.Engine;
 import org.apache.commons.lang3.RandomUtils;
 
+import static hexlet.code.Engine.numberOfRounds;
+import static hexlet.code.Engine.sumQuestionAndAnswer;
+
 public class GCD {
 
     public static void gameGCD() {
@@ -10,9 +13,9 @@ public class GCD {
 
         System.out.println("Find the greatest common divisor of given numbers.");
 
-        String[][] questionsAndAnswersGCD = new String[3][2];
+        String[][] questionsAndAnswersGCD = new String[numberOfRounds][sumQuestionAndAnswer];
 
-        for (var i = 0; i < 3; i++) {
+        for (var i = 0; i < numberOfRounds; i++) {
             int number1 = RandomUtils.nextInt(0, 100);
             int number2 = RandomUtils.nextInt(0, 100);
             questionsAndAnswersGCD[i][0] = Integer.toString(number1) + " " + Integer.toString(number2);
