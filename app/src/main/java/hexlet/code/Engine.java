@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class Engine {
     public static String playerName;
-    public static int numberOfRounds = 3;
-    public static int sumQuestionAndAnswer = 2;
-    public static int maxRandomNumber = 100;
-    public static int lengthOfProgression = 10;
+    public static final int numberOfRounds = 3;
+    public static final int sumQuestionAndAnswer = 2;
+    public static final int maxRandomNumber = 100;
+    public static final int lengthOfProgression = 10;
     public static Scanner sc = new Scanner(System.in);
     public static void toGreet() {
         System.out.println("Welcome to the Brain Games!");
