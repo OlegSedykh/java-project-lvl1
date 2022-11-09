@@ -3,8 +3,7 @@ package hexlet.code.Game;
 import hexlet.code.Engine;
 import org.apache.commons.lang3.RandomUtils;
 
-import static hexlet.code.Engine.numberOfRounds;
-import static hexlet.code.Engine.sumQuestionAndAnswer;
+import static hexlet.code.Engine.*;
 
 public class Prime {
 
@@ -16,7 +15,7 @@ public class Prime {
         String[][] questionsAndAnswersPrime = new String[numberOfRounds][sumQuestionAndAnswer];
 
         for (var i = 0; i < numberOfRounds; i++) {
-            int number1 = RandomUtils.nextInt(0, 100);
+            int number1 = RandomUtils.nextInt(0, maxRandomNumber);
             questionsAndAnswersPrime[i][0] = Integer.toString(number1);
             questionsAndAnswersPrime[i][1] = isPrime(number1);
         }

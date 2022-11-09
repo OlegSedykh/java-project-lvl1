@@ -3,8 +3,7 @@ package hexlet.code.Game;
 import hexlet.code.Engine;
 import org.apache.commons.lang3.RandomUtils;
 
-import static hexlet.code.Engine.numberOfRounds;
-import static hexlet.code.Engine.sumQuestionAndAnswer;
+import static hexlet.code.Engine.*;
 
 public class Even {
     public static void gameEven() {
@@ -15,7 +14,7 @@ public class Even {
         String[][] questionsAndAnswersEven = new String[numberOfRounds][sumQuestionAndAnswer];
 
         for (var i = 0; i < numberOfRounds; i++) {
-            int number1 = RandomUtils.nextInt(0, 100);
+            int number1 = RandomUtils.nextInt(0, maxRandomNumber);
             questionsAndAnswersEven[i][0] = Integer.toString(number1);
             questionsAndAnswersEven[i][1] = searchEvenOrNo(number1);
         }

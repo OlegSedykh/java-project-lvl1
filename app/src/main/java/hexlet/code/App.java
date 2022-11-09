@@ -12,24 +12,30 @@ public class App {
         Scanner choice = new Scanner(System.in);
         System.out.print("Your choice: ");
         int choiceNumberGame = choice.nextInt();
+        String greet = "1";
+        String even = "2";
+        String calc = "3";
+        String gcd = "4";
+        String progression = "5";
+        String prime = "6";
         System.out.println();
-        switch (choiceNumberGame) {
-            case 1:
+        switch (Integer.toString(choiceNumberGame)) {
+            case "1":
                 Engine.toGreet();
                 break;
-            case 2:
+            case "2":
                 Even.gameEven();
                 break;
-            case 3:
+            case "3":
                 Calc.gameCalc();
                 break;
-            case 4:
+            case "4":
                 GCD.gameGCD();
                 break;
-            case 5:
+            case "5":
                 Progression.gameProgression();
                 break;
-            case 6:
+            case "6":
                 Prime.gamePrime();
                 break;
             default:
