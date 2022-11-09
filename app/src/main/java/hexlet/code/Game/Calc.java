@@ -14,8 +14,7 @@ public class Calc {
 
         String[][] questionsAndAnswersCalc = new String[numberOfRounds][sumQuestionAndAnswer];
         for (var i = 0; i < numberOfRounds; i++) {
-            int numberOfOperations = 3;
-            int numberAction = RandomUtils.nextInt(0, numberOfOperations); //0 = "+"; 1 = "-"; 2 = "*";
+            int numberAction = RandomUtils.nextInt(0, numberOfOperationsInCalc); //0 = "+"; 1 = "-"; 2 = "*";
             int number1 = RandomUtils.nextInt(0, maxRandomNumber);
             int number2 = RandomUtils.nextInt(0, maxRandomNumber);
             switch (numberAction) {

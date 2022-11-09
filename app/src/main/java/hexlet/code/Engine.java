@@ -6,6 +6,7 @@ public class Engine {
     public static String playerName;
     public static final int numberOfRounds = 3;
     public static final int sumQuestionAndAnswer = 2;
+    public static final int numberOfOperationsInCalc = 3;
     public static final int maxRandomNumber = 100;
     public static final int lengthOfProgression = 10;
     public static Scanner sc = new Scanner(System.in);
