@@ -4,14 +4,16 @@ import hexlet.code.Cli;
 import hexlet.code.Engine;
 import org.apache.commons.lang3.RandomUtils;
 
-import static hexlet.code.Engine.*;
+import static hexlet.code.Engine.COUNT_ROUNDS;
+import static hexlet.code.Engine.SUM_QUESTION_AND_ANSWER;
+import static hexlet.code.Engine.MAX_RANDOM_NUMBER;
 
 public class GCD {
 
     public static void gameGCD() {
         Cli.greet();
 
-        System.out.println("Find the greatest common divisor of given numbers.");
+        String ruleGCD = "Find the greatest common divisor of given numbers.";
 
         String[][] questionsAndAnswersGCD = new String[COUNT_ROUNDS][SUM_QUESTION_AND_ANSWER];
 
@@ -22,7 +24,7 @@ public class GCD {
             questionsAndAnswersGCD[i][1] = Integer.toString(searchGcd(number1, number2));
         }
 
-        Engine.playGame(questionsAndAnswersGCD);
+        Engine.playGame(questionsAndAnswersGCD, ruleGCD);
 
     }
 

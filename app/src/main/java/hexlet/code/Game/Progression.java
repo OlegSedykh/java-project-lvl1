@@ -6,14 +6,18 @@ import org.apache.commons.lang3.RandomUtils;
 
 import java.util.Arrays;
 
-import static hexlet.code.Engine.*;
+import static hexlet.code.Engine.COUNT_ROUNDS;
+import static hexlet.code.Engine.MAX_RANDOM_NUMBER;
+import static hexlet.code.Engine.SUM_QUESTION_AND_ANSWER;
+import static hexlet.code.Engine.LENGTH_PROGRESSION;
+
 
 public class Progression {
 
     public static void gameProgression() {
         Cli.greet();
 
-        System.out.println("What number is missing in the progression?");
+        String ruleProgression = "What number is missing in the progression?";
 
         String[][] questionsAndAnswersProgression = new String[COUNT_ROUNDS][SUM_QUESTION_AND_ANSWER];
 
@@ -26,7 +30,7 @@ public class Progression {
             questionsAndAnswersProgression[i][1] = Integer.toString(progression[number2]);
         }
 
-        Engine.playGame(questionsAndAnswersProgression);
+        Engine.playGame(questionsAndAnswersProgression, ruleProgression);
 
     }
 
