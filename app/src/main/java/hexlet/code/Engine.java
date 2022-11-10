@@ -3,12 +3,20 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    protected static String playerName;
+    private static String playerName;
     public static final int COUNT_ROUNDS = 3;
     public static final int SUM_QUESTION_AND_ANSWER = 2;
     public static final int NUMBER_OPERATIONS_CALC = 3;
     public static final int MAX_RANDOM_NUMBER = 100;
     public static final int LENGTH_PROGRESSION = 10;
+
+    public static String getPlayerName() {
+        return playerName;
+    }
+
+    public static void setPlayerName(String name) {
+        playerName = name;
+    }
 
 
     public static void playGame(String[][] sample, String rule) {

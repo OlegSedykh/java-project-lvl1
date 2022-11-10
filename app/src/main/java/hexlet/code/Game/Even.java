@@ -19,11 +19,7 @@ public class Even {
         for (var i = 0; i < COUNT_ROUNDS; i++) {
             int number1 = RandomUtils.nextInt(0, MAX_RANDOM_NUMBER);
             questionsAndAnswersEven[i][0] = Integer.toString(number1);
-            if (isEven(number1) == true) {
-                questionsAndAnswersEven[i][1] = "yes";
-            } else {
-                questionsAndAnswersEven[i][1] = "no";
-            }
+            questionsAndAnswersEven[i][1] = isEven(number1) == true ? "yes" : "no";
         }
 
         Engine.playGame(questionsAndAnswersEven, ruleEven);
@@ -31,9 +27,6 @@ public class Even {
     }
 
     public static boolean isEven(int n1) {
-        if (n1 % 2 == 0) {
-            return true;
-        }
-        return false;
+        return n1 % 2 == 0 ? true : false;
     }
 }

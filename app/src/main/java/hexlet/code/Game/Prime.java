@@ -20,11 +20,7 @@ public class Prime {
         for (var i = 0; i < COUNT_ROUNDS; i++) {
             int number1 = RandomUtils.nextInt(0, MAX_RANDOM_NUMBER);
             questionsAndAnswersPrime[i][0] = Integer.toString(number1);
-            if (isPrime(number1) == true) {
-                questionsAndAnswersPrime[i][1] = "yes";
-            } else {
-                questionsAndAnswersPrime[i][1] = "no";
-            }
+            questionsAndAnswersPrime[i][1] = isPrime(number1) == true ? "yes" : "no";
         }
 
         Engine.playGame(questionsAndAnswersPrime, rulePrime);

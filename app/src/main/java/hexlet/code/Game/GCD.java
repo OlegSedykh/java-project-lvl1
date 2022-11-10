@@ -20,7 +20,7 @@ public class GCD {
         for (var i = 0; i < COUNT_ROUNDS; i++) {
             int number1 = RandomUtils.nextInt(0, MAX_RANDOM_NUMBER);
             int number2 = RandomUtils.nextInt(0, MAX_RANDOM_NUMBER);
-            questionsAndAnswersGCD[i][0] = Integer.toString(number1) + " " + Integer.toString(number2);
+            questionsAndAnswersGCD[i][0] = number1 + " " + number2;
             questionsAndAnswersGCD[i][1] = Integer.toString(searchGcd(number1, number2));
         }
 
