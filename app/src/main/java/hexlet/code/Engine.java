@@ -4,27 +4,19 @@ import java.util.Scanner;
 
 public class Engine {
     public static String playerName;
-    public static final int numberOfRounds = 3;
-    public static final int sumQuestionAndAnswer = 2;
-    public static final int numberOfOperationsInCalc = 3;
-    public static final int maxRandomNumber = 100;
-    public static final int lengthOfProgression = 10;
-    public static Scanner sc = new Scanner(System.in);
-    public static void toGreet() {
-        System.out.println("Welcome to the Brain Games!");
-        //Scanner name = new Scanner(System.in);
-        System.out.print("May I have your name? ");
-        playerName = sc.next();
-        System.out.println("Hello, " + playerName + "!");
+    public static final int COUNT_ROUNDS = 3;
+    public static final int SUM_QUESTION_AND_ANSWER = 2;
+    public static final int NUMBER_OPERATIONS_CALC = 3;
+    public static final int MAX_RANDOM_NUMBER = 100;
+    public static final int LENGTH_PROGRESSION = 10;
 
-    }
 
-    public static void toGame(String[][] sample) {
-        //Scanner answer = new Scanner(System.in);
+    public static void playGame(String[][] sample) {
+        Scanner scanner = new Scanner(System.in);
         int countWin = 0;
-        for (var i = 0; i < numberOfRounds; i++) {
+        for (var i = 0; i < COUNT_ROUNDS; i++) {
             System.out.print("Question: " + sample[i][0] + "\nYour answer: ");
-            var playerAnswer = sc.next();
+            var playerAnswer = scanner.next();
             if (playerAnswer.equals(sample[i][1])) {
                 System.out.println("Correct!");
                 countWin += 1;
@@ -34,8 +26,8 @@ public class Engine {
                 break;
             }
         }
-        sc.close();
-        if (countWin == numberOfRounds) {
+
+        if (countWin == COUNT_ROUNDS) {
             System.out.println("Congratulations, " + playerName + "!");
         }
     }

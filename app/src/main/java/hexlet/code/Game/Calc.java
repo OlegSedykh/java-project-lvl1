@@ -1,5 +1,6 @@
 package hexlet.code.Game;
 
+import hexlet.code.Cli;
 import hexlet.code.Engine;
 import org.apache.commons.lang3.RandomUtils;
 
@@ -8,15 +9,15 @@ import static hexlet.code.Engine.*;
 
 public class Calc {
     public static void gameCalc() {
-        Engine.toGreet();
+        Cli.greet();
 
         System.out.println("What is the result of the expression?");
 
-        String[][] questionsAndAnswersCalc = new String[numberOfRounds][sumQuestionAndAnswer];
-        for (var i = 0; i < numberOfRounds; i++) {
-            int numberAction = RandomUtils.nextInt(0, numberOfOperationsInCalc); //0 = "+"; 1 = "-"; 2 = "*";
-            int number1 = RandomUtils.nextInt(0, maxRandomNumber);
-            int number2 = RandomUtils.nextInt(0, maxRandomNumber);
+        String[][] questionsAndAnswersCalc = new String[COUNT_ROUNDS][SUM_QUESTION_AND_ANSWER];
+        for (var i = 0; i < COUNT_ROUNDS; i++) {
+            int numberAction = RandomUtils.nextInt(0, NUMBER_OPERATIONS_CALC); //0 = "+"; 1 = "-"; 2 = "*";
+            int number1 = RandomUtils.nextInt(0, MAX_RANDOM_NUMBER);
+            int number2 = RandomUtils.nextInt(0, MAX_RANDOM_NUMBER);
             switch (numberAction) {
                 case 0:
                     questionsAndAnswersCalc[i][0] = number1 + " + " + number2;
@@ -34,6 +35,6 @@ public class Calc {
             }
         }
 
-        Engine.toGame(questionsAndAnswersCalc);
+        Engine.playGame(questionsAndAnswersCalc);
     }
 }

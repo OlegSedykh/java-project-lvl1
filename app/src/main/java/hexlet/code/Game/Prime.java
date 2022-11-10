@@ -1,5 +1,6 @@
 package hexlet.code.Game;
 
+import hexlet.code.Cli;
 import hexlet.code.Engine;
 import org.apache.commons.lang3.RandomUtils;
 
@@ -8,19 +9,19 @@ import static hexlet.code.Engine.*;
 public class Prime {
 
     public static void gamePrime() {
-        Engine.toGreet();
+        Cli.greet();
 
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
 
-        String[][] questionsAndAnswersPrime = new String[numberOfRounds][sumQuestionAndAnswer];
+        String[][] questionsAndAnswersPrime = new String[COUNT_ROUNDS][SUM_QUESTION_AND_ANSWER];
 
-        for (var i = 0; i < numberOfRounds; i++) {
-            int number1 = RandomUtils.nextInt(0, maxRandomNumber);
+        for (var i = 0; i < COUNT_ROUNDS; i++) {
+            int number1 = RandomUtils.nextInt(0, MAX_RANDOM_NUMBER);
             questionsAndAnswersPrime[i][0] = Integer.toString(number1);
             questionsAndAnswersPrime[i][1] = isPrime(number1);
         }
 
-        Engine.toGame(questionsAndAnswersPrime);
+        Engine.playGame(questionsAndAnswersPrime);
 
     }
 

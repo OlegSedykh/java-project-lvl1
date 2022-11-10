@@ -9,9 +9,9 @@ public class App {
     public static void main(String[] args) {
         System.out.println("Please enter the game number and press Enter.\n1 - Greet\n2 - Even"
                 + "\n3 - Calc\n4 - GCD\n5 - Progression\n6 - Prime\n0 - Exit");
-        Scanner choice = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Your choice: ");
-        int choiceNumberGame = choice.nextInt();
+        int choiceNumberGame = scanner.nextInt();
         String greet = "1";
         String even = "2";
         String calc = "3";
@@ -21,7 +21,7 @@ public class App {
         System.out.println();
         switch (Integer.toString(choiceNumberGame)) {
             case "1":
-                Engine.toGreet();
+                Cli.greet();
                 break;
             case "2":
                 Even.gameEven();
@@ -41,7 +41,7 @@ public class App {
             default:
 
         }
-        choice.close();
+        scanner.close();
     }
 
 }
