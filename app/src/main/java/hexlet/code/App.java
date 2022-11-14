@@ -15,12 +15,6 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Your choice: ");
         int choiceNumberGame = scanner.nextInt();
-        String greet = "1";
-        String even = "2";
-        String calc = "3";
-        String gcd = "4";
-        String progression = "5";
-        String prime = "6";
         System.out.println();
         switch (Integer.toString(choiceNumberGame)) {
             case "1":

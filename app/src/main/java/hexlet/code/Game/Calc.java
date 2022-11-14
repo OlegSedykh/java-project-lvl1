@@ -17,39 +17,42 @@ public class Calc {
 
         String[][] questionsAndAnswersCalc = new String[COUNT_ROUNDS][SUM_QUESTION_AND_ANSWER];
         for (var i = 0; i < COUNT_ROUNDS; i++) {
-            int numberAction = RandomUtils.nextInt(0, NUMBER_OPERATIONS_CALC); //0 = "+"; 1 = "-"; 2 = "*";
+            String[] typesOfOperation = {"+", "-", "*"};
+
+            int operation = RandomUtils.nextInt(0, NUMBER_OPERATIONS_CALC); //0 = "+"; 1 = "-"; 2 = "*";
             int number1 = RandomUtils.nextInt(0, MAX_RANDOM_NUMBER);
             int number2 = RandomUtils.nextInt(0, MAX_RANDOM_NUMBER);
-                    questionsAndAnswersCalc[i][0] = questionsForCalc(number1, number2, numberAction);
-                    questionsAndAnswersCalc[i][1] = calculate(number1, number2, numberAction);
+                    questionsAndAnswersCalc[i][0] = questionsForCalc(number1, number2, typesOfOperation[operation]);
+                    questionsAndAnswersCalc[i][1] = Integer.toString(calculate(number1, number2, typesOfOperation[operation]));
         }
 
         Engine.playGame(questionsAndAnswersCalc, ruleCalc);
     }
 
-    public static String calculate(int n1, int n2, int n3) { //0 = "+"; 1 = "-"; 2 = "*";
-        switch (n3) {
-            case 0:
-                return Integer.toString(n1 + n2);
-            case 1:
-                return Integer.toString(n1 - n2);
-            case 2:
-                return Integer.toString(n1 * n2);
+    public static int calculate(int n1, int n2, String operation) {
+        switch (operation) {
+            case "+":
+                return n1 + n2;
+            case "-":
+                return n1 - n2;
+            case "*":
+                return n1 * n2;
             default:
-                return null;
+                System.out.println("This operation is not supported.");
+                return 0;
         }
     }
 
-    public static String questionsForCalc(int n1, int n2, int n3) {
-        switch (n3) {
-            case 0:
+    public static String questionsForCalc(int n1, int n2, String operation) {
+        switch (operation) {
+            case "+":
                 return n1 + " + " + n2;
-            case 1:
+            case "-":
                 return n1 + " - " + n2;
-            case 2:
+            case "*":
                 return n1 + " * " + n2;
             default:
-                return null;
+                return "This operation is not supported.";
         }
     }
 }
