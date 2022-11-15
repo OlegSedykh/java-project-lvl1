@@ -23,7 +23,8 @@ public class Calc {
             int number1 = RandomUtils.nextInt(0, MAX_RANDOM_NUMBER);
             int number2 = RandomUtils.nextInt(0, MAX_RANDOM_NUMBER);
                     questionsAndAnswersCalc[i][0] = questionsForCalc(number1, number2, typesOfOperation[operation]);
-                    questionsAndAnswersCalc[i][1] = Integer.toString(calculate(number1, number2, typesOfOperation[operation]));
+                    questionsAndAnswersCalc[i][1] =
+                            Integer.toString(calculate(number1, number2, typesOfOperation[operation]));
         }
 
         Engine.playGame(questionsAndAnswersCalc, ruleCalc);
