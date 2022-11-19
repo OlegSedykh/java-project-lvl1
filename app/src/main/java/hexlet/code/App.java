@@ -36,7 +36,6 @@ public class App {
                 Prime.gamePrime();
                 break;
             default:
-
         }
         scanner.close();
     }
