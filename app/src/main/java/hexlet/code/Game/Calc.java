@@ -4,12 +4,12 @@ import hexlet.code.Engine;
 import org.apache.commons.lang3.RandomUtils;
 import static hexlet.code.Engine.COUNT_ROUNDS;
 import static hexlet.code.Engine.SUM_QUESTION_AND_ANSWER;
-import static hexlet.code.Engine.NUMBER_OPERATIONS_CALC;
 import static hexlet.code.Engine.MAX_RANDOM_NUMBER;
 
 public class Calc {
     public static void gameCalc() {
         String ruleCalc = "What is the result of the expression?";
+        int NUMBER_OPERATIONS_CALC = 3;
         String[][] questionsAndAnswersCalc = new String[COUNT_ROUNDS][SUM_QUESTION_AND_ANSWER];
         for (var i = 0; i < COUNT_ROUNDS; i++) {
             String[] typesOfOperation = {"+", "-", "*"};

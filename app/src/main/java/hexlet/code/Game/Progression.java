@@ -6,11 +6,11 @@ import java.util.Arrays;
 import static hexlet.code.Engine.COUNT_ROUNDS;
 import static hexlet.code.Engine.MAX_RANDOM_NUMBER;
 import static hexlet.code.Engine.SUM_QUESTION_AND_ANSWER;
-import static hexlet.code.Engine.LENGTH_PROGRESSION;
 public class Progression {
 
     public static void gameProgression() {
         String ruleProgression = "What number is missing in the progression?";
+        int LENGTH_PROGRESSION = 10;
         String[][] questionsAndAnswersProgression = new String[COUNT_ROUNDS][SUM_QUESTION_AND_ANSWER];
         for (var i = 0; i < COUNT_ROUNDS; i++) {
             int number1 = RandomUtils.nextInt(0, MAX_RANDOM_NUMBER); //1е знач прогрессии
