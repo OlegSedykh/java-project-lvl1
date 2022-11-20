@@ -7,9 +7,10 @@ import static hexlet.code.Engine.SUM_QUESTION_AND_ANSWER;
 import static hexlet.code.Engine.MAX_RANDOM_NUMBER;
 
 public class Calc {
+    public static final int NUMBER_OPERATIONS_CALC = 3;
+
     public static void gameCalc() {
         String ruleCalc = "What is the result of the expression?";
-        int NUMBER_OPERATIONS_CALC = 3;
         String[][] questionsAndAnswersCalc = new String[COUNT_ROUNDS][SUM_QUESTION_AND_ANSWER];
         for (var i = 0; i < COUNT_ROUNDS; i++) {
             String[] typesOfOperation = {"+", "-", "*"};
